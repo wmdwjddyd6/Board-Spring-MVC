@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.shoppingmall.mapper.BoardMapper">
+
+	<sql id="boardColumns">
+		id
+		,title
+		,content
+		,delete_yn
+		,create_date
+		,views
+		,type
+	</sql>
+
+
+	<!--게시글 작성 -->
+	<insert id="insertBoard" parameterType="com.spring.shoppingmall.model.BoardDTO">
+		
+		INSERT INTO
+			tb_board (title, content, create_date, type)
+		VALUES
+			(#{title}, #{content}, #{createDate}, #{type})
+			
+	</insert>
+</mapper>
