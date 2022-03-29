@@ -7,9 +7,10 @@
 </head>
 <body>
 <h1>
-	홈 화면
+	메인 화면
 </h1>
 
+<a href="/board/list">  목록 </a> <br/>
 <a href="/board/write">  글쓰기 </a>
 </body>
 </html>

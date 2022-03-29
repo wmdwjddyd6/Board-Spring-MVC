@@ -14,14 +14,24 @@
 		,type
 	</sql>
 
+	<!-- 게시글 목록 확인 -->
+	<select id="selectAll" resultType="com.spring.shoppingmall.model.BoardDTO">
+		SELECT 
+			<include refid="boardColumns" />
+		FROM
+			tb_board
+		ORDER BY
+			id desc
+	</select>
 
 	<!--게시글 작성 -->
-	<insert id="insertBoard" parameterType="com.spring.shoppingmall.model.BoardDTO">
-		
+	<insert id="insertBoard"
+		parameterType="com.spring.shoppingmall.model.BoardDTO">
+
 		INSERT INTO
 			tb_board (title, content, create_date, type)
 		VALUES
 			(#{title}, #{content}, #{createDate}, #{type})
-			
+
 	</insert>
 </mapper>
