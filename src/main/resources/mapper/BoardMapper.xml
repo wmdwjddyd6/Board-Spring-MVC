@@ -24,6 +24,16 @@
 			id desc
 	</select>
 
+	<!-- 게시글 조회 -->
+	<select id="selectPost" resultType="com.spring.shoppingmall.model.BoardDTO">
+		SELECT
+			<include refid="boardColumns" />
+		FROM
+			tb_board
+		WHERE
+			id = #{id}
+	</select>
+
 	<!--게시글 작성 -->
 	<insert id="insertBoard"
 		parameterType="com.spring.shoppingmall.model.BoardDTO">

@@ -8,10 +8,11 @@ function write() {
 
     $.ajax({
         type: "POST",
-        url: "/board/write",
+        url: "/board",
         data: data,
         success: function (response) {
             console.log("성공 : " + response);
+            location.href="list";
         },
         error: function (response) {
             console.log("실패 : " + response);

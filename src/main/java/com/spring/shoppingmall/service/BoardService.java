@@ -12,4 +12,7 @@ public interface BoardService {
 	// 게시글 작성
 	int write(BoardDTO boardDTO);
 
+	// 게시글 조회
+	BoardDTO getPost(Long boardId);
+
 }

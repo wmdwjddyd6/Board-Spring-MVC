@@ -10,8 +10,10 @@
 	<h1>글쓰기 화면</h1>
 
 	<form>
-		<input type="text" id="title" name="title" />
-		<input type="text" id="content" name="content" />
+		제목 <br />
+		<input size="120" type="text" id="title" name="title" /> <br /> <br />
+		내용 <br />
+		<textarea cols="100" rows="13" id="content" name="content"></textarea>
 		<button type="button" id="write_btn">작성</button>
 	</form>
 

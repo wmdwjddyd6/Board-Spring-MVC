@@ -11,5 +11,8 @@ public interface BoardMapper {
 	
 	// 게시글 등록
 	int insertBoard(BoardDTO boardDTO);
+
+	// 게시글 조회
+	BoardDTO selectPost(Long boardId);
 	
 }

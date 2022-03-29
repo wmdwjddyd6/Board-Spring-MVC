@@ -35,4 +35,11 @@ public class BoardServiceImpl implements BoardService {
 		return boardMapper.insertBoard(boardDTO);
 	}
 
+	@Override
+	public BoardDTO getPost(Long boardId) {
+		BoardDTO boardDTO = boardMapper.selectPost(boardId);
+		
+		return boardDTO;
+	}
+
 }

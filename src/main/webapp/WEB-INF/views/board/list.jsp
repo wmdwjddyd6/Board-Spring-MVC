@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
 	language="java"%>
 <%@ page session="false"%>
@@ -24,10 +24,11 @@
 		<tbody>
 			<c:forEach var="board" items="${boards}">
 				<tr align="center" bgcolor="white">
-					<td><c:out value="${board.id}"/></td>
-					<td><c:out value="${board.title}"/></td>
-					<td><fmt:formatDate pattern="yyyy-MM-dd hh:mm" value="${board.createDate}"/></td>
-					<td><c:out value="${board.views}"/></td>
+					<td><c:out value="${board.id}" /></td>
+					<td><a href="/board/post?boardId=${board.id}"><c:out value="${board.title}" /></a></td>
+					<td><fmt:formatDate pattern="yyyy-MM-dd hh:mm"
+							value="${board.createDate}" /></td>
+					<td><c:out value="${board.views}" /></td>
 				</tr>
 			</c:forEach>
 		</tbody>
