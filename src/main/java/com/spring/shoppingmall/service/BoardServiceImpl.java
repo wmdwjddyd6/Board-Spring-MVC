@@ -26,6 +26,13 @@ public class BoardServiceImpl implements BoardService {
 		
 		return list;
 	}
+
+	@Override
+	public BoardDTO getPost(Long boardId) {
+		BoardDTO boardDTO = boardMapper.selectPost(boardId);
+		
+		return boardDTO;
+	}
 	
 	@Override
 	public int write(BoardDTO boardDTO) {
@@ -36,10 +43,10 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public BoardDTO getPost(Long boardId) {
-		BoardDTO boardDTO = boardMapper.selectPost(boardId);
+	public int update(BoardDTO boardDTO, Long boardId) {
+		boardDTO.setId(boardId);
 		
-		return boardDTO;
+		return boardMapper.updateBoard(boardDTO);
 	}
 
 }

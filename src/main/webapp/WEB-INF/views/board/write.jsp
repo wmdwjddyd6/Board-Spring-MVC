@@ -11,9 +11,9 @@
 
 	<form>
 		제목 <br />
-		<input size="120" type="text" id="title" name="title" /> <br /> <br />
+		<input size="120" type="text" id="title" name="title" value="${board.title}" /> <br /> <br />
 		내용 <br />
-		<textarea cols="100" rows="13" id="content" name="content"></textarea>
+		<textarea cols="100" rows="13" id="content" name="content"><c:out value="${board.content}"></c:out></textarea>
 		<button type="button" id="write_btn">작성</button>
 	</form>
 
